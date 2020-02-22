@@ -26,13 +26,16 @@ public class MusicPlayer {
 
     public String playMusic(GenreOfMusic musicGenre) {
         switch (musicGenre) {
-            case ClassicalMusic:
+            case ClassicalMusic: {
                 return "Playing:" + classicalMusic.getSong().get(indexOfRandomSong());
-          //  break;
-            case RockMusic:
+            }
+            case RockMusic: {
                 return "Playing:" + rockMusic.getSong().get(indexOfRandomSong());
-           // break;
+            }
+            default: {
+                return "Nothing is selected!";
+            }
         }
-        return "Nothing is selected!";
+
     }
 }
